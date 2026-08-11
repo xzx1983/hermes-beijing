@@ -10,10 +10,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "paper" / "hermes_manuscript"
-FIGURES = OUT / "figures"
-RESULTS = ROOT / "remote_results"
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT
+FIGURES = ROOT / "figures"
+RESULTS = ROOT / "results"
 HERMES_RESULTS = RESULTS / "hermes_clean_split"
 GRAPH_RESULTS = RESULTS / "graph_baselines_clean_split"
 STANDARD_RESULTS = RESULTS / "standard_baselines_clean_split"

@@ -2,5 +2,7 @@ __pycache__/
 *.py[cod]
 .venv/
 outputs/
-remote_results/
+results/
 models/
+figures/
+asset_summary.json

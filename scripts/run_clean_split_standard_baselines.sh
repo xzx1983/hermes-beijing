@@ -3,7 +3,7 @@ set -euo pipefail
 
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 DEVICE="${DEVICE:-cuda}"
-OUT_DIR="${OUT_DIR:-remote_results/standard_baselines_clean_split}"
+OUT_DIR="${OUT_DIR:-results/standard_baselines_clean_split}"
 MODEL_DIR="${MODEL_DIR:-models/standard_baselines_clean_split}"
 TRAIN_RATIO="${TRAIN_RATIO:-0.7}"
 VAL_RATIO="${VAL_RATIO:-0.1}"

@@ -17,8 +17,10 @@ The package is scoped to the manuscript's clean-split comparison. It includes:
   chronological protocol.
 - The evidence-generation script used for the block-bootstrap, ablation, and seasonal-diagnostic
   tables, and the manuscript figure-generation script.
-- Cached result summaries (`results/cached/`) that reproduce every number reported in the manuscript.
 - `pyproject.toml` for `uv` environment creation.
+
+Result files are not shipped in this repository; running the scripts below regenerates them
+locally under `results/`, `models/`, and `figures/` (all gitignored).
 
 ## Data
 
@@ -110,9 +112,9 @@ experiment (components, validation-weight selection, and frozen-ensemble test ev
 env DEVICE=cuda PYTHON_BIN=python3 bash scripts/run_hermes_experiment.sh
 ```
 
-Outputs are written to `remote_results/hermes_clean_split/` and `models/hermes_clean_split/`.
-The validation weight-grid evidence is written to
-`remote_results/hermes_clean_split/hermes_validation_weight_grid.csv`.
+All paths are local to your clone; nothing is written outside this folder. Outputs are written
+to `results/hermes_clean_split/` and `models/hermes_clean_split/`. The validation weight-grid
+evidence is written to `results/hermes_clean_split/hermes_validation_weight_grid.csv`.
 
 ## Baselines
 
@@ -135,25 +137,45 @@ Use `--device cpu` / `DEVICE=cpu` if CUDA is unavailable. CPU training is expect
 
 ## Evidence and Figures
 
-Once `remote_results/` is populated, the manuscript's block-bootstrap, ablation, and
-seasonal-diagnostic tables are regenerated with:
+Once `results/` is populated by the runs above, the manuscript's block-bootstrap, ablation, and
+seasonal-diagnostic tables are regenerated locally with:
 
 ```bash
 env PYTHONPATH=src python3 scripts/analyze_hermes_evidence.py
 ```
 
-Manuscript figures are regenerated with:
+This writes CSVs and `analysis-report.md` to `evidence/`.
+
+Manuscript figures are regenerated locally with:
 
 ```bash
 python3 scripts/build_figures.py
 ```
 
-## Cached Results
+This writes PDFs and PNGs to `figures/`, including `figures/rmse_by_horizon.png`.
 
-`results/cached/` contains the aggregate and station-level metric CSVs and the evidence-table
-CSVs already generated for the manuscript, so every reported number can be checked without
-retraining. Row-level prediction files (used only internally for the block-bootstrap test) are
-not included because of their size; they regenerate from the commands above.
+## Example Output
+
+`docs/example_rmse_by_horizon.png` below is the actual `figures/rmse_by_horizon.png` produced
+by `scripts/build_figures.py` from a full three-seed run of this repository, and is the exact
+figure used as Figure 2 in the manuscript:
+
+![RMSE by forecast horizon for HERMES against station-wise, CNN, and graph baselines](docs/example_rmse_by_horizon.png)
+
+The table below is the manuscript's key-horizon comparison (mean RMSE / MAE in micrograms m-3
+over three seeds and 12 stations, lower is better); it is exactly what
+`results/*/*/*_aggregate_metrics.csv` contain once you run the commands above and average over
+seeds:
+
+| Method | H1 RMSE | H1 MAE | H6 RMSE | H6 MAE | H12 RMSE | H12 MAE | H24 RMSE | H24 MAE |
+|---|---|---|---|---|---|---|---|---|
+| GRU+RNN | 20.73 | 12.44 | 43.91 | 26.59 | 52.24 | 31.67 | 66.96 | 42.69 |
+| BiLSTM-MA | 21.68 | 13.39 | 44.32 | 26.67 | 53.35 | 32.02 | 68.82 | 43.01 |
+| Spatial CNN | 27.76 | 16.81 | 41.64 | 24.40 | 50.07 | 29.46 | 71.56 | 44.04 |
+| STGCN | 22.85 | 13.97 | 44.12 | 26.67 | 52.15 | 31.52 | 68.72 | 43.72 |
+| Graph WaveNet | 21.30 | 13.07 | 40.90 | 23.80 | 49.58 | 29.10 | 67.93 | 41.93 |
+| AGCRN | 26.92 | 16.06 | 41.56 | 24.34 | 50.60 | 29.53 | 68.58 | 42.73 |
+| **HERMES** | **17.66** | **9.61** | **38.88** | **22.35** | **47.39** | **27.98** | **65.09** | **40.87** |
 
 ## Reproducibility Notes
 
