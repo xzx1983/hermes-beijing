@@ -1,0 +1,13 @@
+Name_EN,Longitude,Latitude,Type,grid_row,grid_col
+Dingling,116.22,40.292,Clean site,0,0
+Changping,116.23,40.217,Suburban site,0,1
+Huairou,116.628,40.328,Suburban site,0,2
+Shunyi,116.655,40.127,Suburban site,0,3
+Wanliu,116.287,39.987,Urban site,1,0
+Guanyuan,116.339,39.929,Urban site,1,1
+Aotizhongxin,116.397,39.982,Urban site,1,2
+Nongzhanguan,116.461,39.937,Urban site,1,3
+Gucheng,116.184,39.914,Urban site,2,0
+Wanshouxigong,116.352,39.878,Urban site,2,1
+Tiantan,116.407,39.886,Urban site,2,2
+Dongsi,116.417,39.929,Urban site,2,3

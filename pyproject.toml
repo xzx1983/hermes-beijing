@@ -1,0 +1,15 @@
+[project]
+name = "hermes-pm25-beijing"
+version = "0.1.0"
+description = "Reproducible HERMES training and evaluation package for multi-horizon Beijing PM2.5 forecasting."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.7",
+  "numpy>=1.23",
+  "pandas>=1.5",
+  "torch>=2.0",
+]
+
+[tool.uv]
+package = false

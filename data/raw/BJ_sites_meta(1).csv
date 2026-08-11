@@ -1,0 +1,36 @@
+﻿Name_EN,Name,Full_name,Acronym,Longitude,Latitude,Type
+Dongsi,东四,东城东四,DS,116.417,39.929,Urban site
+Tiantan,天坛,东城天坛,TT,116.407,39.886,Urban site
+Guanyuan,官园,西城官园,GY,116.339,39.929,Urban site
+Wanshouxigong,万寿西宫,西城万寿西宫,WSXG,116.352,39.878,Urban site
+Aotizhongxin,奥体中心,朝阳奥体中心,ATZX,116.397,39.982,Urban site
+Nongzhangguan,农展馆,朝阳农展馆,NZG,116.461,39.937,Urban site
+Wanliu,万柳,海淀万柳,WL,116.287,39.987,Urban site
+Beibuxinqu,北部新区,海淀北部新区,BBXQ,116.174,40.09,Urban site
+Zhiwuyuan,植物园,海淀北京植物园,ZWY,116.207,40.002,Urban site
+Fengtaihuayuan,丰台花园,丰台花园,FTHY,116.279,39.863,Urban site
+Yungang,云岗,丰台云岗,YG,116.146,39.824,Urban site
+Gucheng,古城,石景山古城,GC,116.184,39.914,Urban site
+Qianmen,前门,前门东大街，前门交通点,QM,116.395,39.899,Traffic monitoring site
+Yongdingmennei,永定门内,永定门内大街，永定门交通点,YDMN,116.394,39.876,Traffic monitoring site
+Xizhimenbei,西直门北,西直门北大街，西直门交通点,XZMB,116.349,39.954,Traffic monitoring site
+Nansanhuan,南三环,南三环西路，南三环交通点,NSH,116.368,39.856,Traffic monitoring site
+Dongsihuan,东四环,东四环北路，东四环交通点,DSH,116.483,39.939,Traffic monitoring site
+Fangshan,房山,房山良乡,FS,116.136,39.742,Suburban site
+Daxing,大兴,大兴黄村镇,DX,116.404,39.718,Suburban site
+Yizhuang,亦庄,亦庄开发区,YZ,116.506,39.795,Suburban site
+Tongzhou,通州,通州新城,TZ,116.663,39.886,Suburban site
+Shunyi,顺义,顺义新城,SY,116.655,40.127,Suburban site
+Changping,昌平,昌平镇,CP,116.23,40.217,Suburban site
+Mentougou,门头沟,门头沟龙泉镇,MTG,116.106,39.937,Suburban site
+Pinggu,平谷,平谷镇,PG,117.1,40.143,Suburban site
+Huairou,怀柔,怀柔镇,HR,116.628,40.328,Suburban site
+Miyun,密云,密云镇,MY,116.832,40.37,Suburban site
+Yanqing,延庆,延庆镇,YQ,115.972,40.453,Suburban site
+Dingling,定陵,昌平定陵,DL,116.22,40.292,Clean site
+Badaling,八达岭,京西北八达岭，京西北区域点,BDL,115.988,40.365,Regional background site
+Miyunhshuiku,密云水库,京东北密云水库，京东北区域点,MYSK,116.911,40.499,Regional background site
+Donggaocun,东高村,京东东高村，京东区域点,DGC,117.12,40.1,Regional background site
+Yongledian,永乐店,京东南永乐店，京东南区域点,YLD,116.783,39.712,Regional background site
+Yufa,榆垡,京南榆垡，京南区域点,YF,116.3,39.52,Regional background site
+Liulihe,琉璃河,京西南琉璃河，京西南区域点,LLH,116,39.58,Regional background site
