@@ -196,6 +196,5 @@ pyproject.toml                           uv project and dependency file
 
 Before uploading this folder to GitHub, Zenodo, or another public archive:
 
-- Choose and add a software license.
 - Confirm the UCI dataset redistribution terms are compatible with the target archive.
 - Add the final archive DOI or repository URL to the manuscript Data and code availability section.
